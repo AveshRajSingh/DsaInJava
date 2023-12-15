@@ -1,19 +1,17 @@
 public class Main {
 public static void main(String[] args)
  {
-    int [] numbs = {1,1,0,1,1,1};
-    int result = find(numbs);
-    System.out.println(result);
-  }
-   public static int find(int [] numbs){
-    if (numbs.length==0)return 0;
-    int count =0, max = 0;
-       for (int numb : numbs) {
-           if (numb == 1) {
-               count++;
-               max = Math.max(max, count);
-           } else count = 0;
-       }
-       return max;
+  linkedList list = new linkedList();
+    list.insertFirst(30);
+     list.insertFirst(4);
+     list.insertFirst(35);
+     list.insertFirst(23);
+     list.insertFirst(10);
+     list.insertLast(99);
+     list.insert(34,4);
+  list.display();
+  list.deleteLast();
+     list.display();
+     System.out.println(list.delete(2));
     }
 }
